@@ -1,0 +1,9 @@
+digraph serial_graph_dump {
+subgraph top {
+struct1 [shape=record,group=left,height=0.3,margin=0.15,fillcolor="white",label="  <0> 0,0,0 "];
+}
+    1 [label="1,0,0",fillcolor="orange",group=left];
+    struct1:0 -> 1;
+out [shape=Msquare,group=left,label="output\nresult"];
+    1 -> out;
+}

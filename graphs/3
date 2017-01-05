@@ -1,0 +1,40 @@
+digraph serial_graph_dump {
+subgraph top {
+struct1 [shape=record,group=left,height=0.3,margin=0.15,fillcolor="white",label="  <0> 0,0,0 | <3> 0,1,0 | <4> 0,1,1 | <6> 0,2,0 | <7> 0,2,1 | <8> 0,2,2 "];
+}
+    9 [label="1,0,0",fillcolor="orange",group=left];
+    struct1:0 -> 9;
+    12 [label="1,1,0",fillcolor="lightblue",group=left];
+    struct1:3 -> 12;
+    9 -> 12;
+    13 [label="1,1,1",group=left];
+    struct1:4 -> 13;
+    12 -> 13;
+    15 [label="1,2,0",fillcolor="lightblue"];
+    struct1:6 -> 15;
+    9 -> 15;
+    16 [label="1,2,1"];
+    struct1:7 -> 16;
+    15 -> 16;
+    12 -> 16;
+    17 [label="1,2,2"];
+    struct1:8 -> 17;
+    15 -> 17;
+    22 [label="2,1,1",fillcolor="orange",group=left];
+    13 -> 22;
+    25 [label="2,2,1",fillcolor="lightblue",group=left];
+    16 -> 25;
+    22 -> 25;
+    26 [label="2,2,2",group=left];
+    17 -> 26;
+    25 -> 26;
+    35 [label="3,2,2",fillcolor="orange",group=left];
+    26 -> 35;
+out [shape=Msquare,group=left,label="output\nresult"];
+    9 -> out;
+    12 -> out;
+    22 -> out;
+    15 -> out;
+    25 -> out;
+    35 -> out;
+}

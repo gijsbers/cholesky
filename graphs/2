@@ -1,0 +1,19 @@
+digraph serial_graph_dump {
+subgraph top {
+struct1 [shape=record,group=left,height=0.3,margin=0.15,fillcolor="white",label="  <0> 0,0,0 | <2> 0,1,0 | <3> 0,1,1 "];
+}
+    4 [label="1,0,0",fillcolor="orange",group=left];
+    struct1:0 -> 4;
+    6 [label="1,1,0",fillcolor="lightblue",group=left];
+    struct1:2 -> 6;
+    4 -> 6;
+    7 [label="1,1,1",group=left];
+    struct1:3 -> 7;
+    6 -> 7;
+    11 [label="2,1,1",fillcolor="orange",group=left];
+    7 -> 11;
+out [shape=Msquare,group=left,label="output\nresult"];
+    4 -> out;
+    6 -> out;
+    11 -> out;
+}
